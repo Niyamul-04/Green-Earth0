@@ -205,10 +205,10 @@ const displayDetails = (details) => {
   modalBox.showModal();
 };
 
-// Empty Cart Items Array
+
 let cartItems = [];
 
-// Items removing to cart container
+
 const removeFromCart = (removeBtn) => {
   const itemName = removeBtn.previousElementSibling.children[0].textContent;
   const found = cartItems.findIndex((item) => item.name === itemName);
@@ -224,7 +224,7 @@ const removeFromCart = (removeBtn) => {
   addToCart(cartItems);
 };
 
-// Items adding to cart container
+
 const addToCart = (cartItems) => {
   const totalPriceEl = getEl("#cart-total-price");
   cleaner(cartContainer);
@@ -256,7 +256,7 @@ const addToCart = (cartItems) => {
   });
 };
 
-// Toggles Classes
+
 const toggleClasses = (show) => {
   const cartSection = getEl("#cart-section");
   if (show) {
@@ -270,7 +270,7 @@ const toggleClasses = (show) => {
   }
 };
 
-// Listeners
+
 cardContainer.addEventListener("click", (e) => {
   const target = e.target;
   const plantNameEl = target.closest(".plant_name");
