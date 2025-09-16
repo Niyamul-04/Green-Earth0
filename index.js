@@ -1,12 +1,9 @@
-// Function for getting DOM Elements
 const getEl = (selector, all = false) => {
   return all
     ? document.querySelectorAll(selector)
     : document.querySelector(selector);
 };
 
-// Removes unwanted spacing
-// Converts string to number
 const textToNumber = (el) => {
   const num = Number(el.textContent.trim());
   return num;
